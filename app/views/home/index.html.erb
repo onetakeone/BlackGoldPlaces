@@ -2,7 +2,21 @@
 <h1>Places</h1>
 <p>of Black Gold</p>
 </div>
-<iframe width="300" height="300" frameborder="0" style="border:0"
- src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=ADDRESS_OR_COORDINATES"
- allowfullscreen>
-</iframe>
+ 
+<div id="map"></div>
+<script>
+  function initMap() {
+    var coord = {lat: 53.9005, lng: 27.559};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClE56ThQPOKZ9t3lQejb60T3KFt2U5yII&callback=initMap">
+</script>
