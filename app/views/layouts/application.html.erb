@@ -10,8 +10,11 @@
 
   <body>
   	<header>
-  	<%= link_to 'Register place', new_place_path %> |
+  	<%= link_to 'Home', home_index_path %> | <%= link_to 'Register place', new_place_path %> 
   	</header>
+    <p class="notice"><%=notice%></p>
+    <p class="alert"><%=alert%></p>
     <%= yield %>
+
   </body>
 </html>
