@@ -1,0 +1,33 @@
+<%@place.each do |p|%>
+
+	<table class="place-table">
+
+		<tr>
+			<td>
+				<h2><%=p.name%></h2>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<i><%= p.city %>, <%= p.street %>, <%= p.bldg %></i>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<p><%= p.description %></p><h6><%= p.tags %></h6>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<%= link_to place_path(p) do %>
+					<button type="button" class='button'>View the place</button>
+				<%end%>
+			</td>
+		</tr>
+
+	</table>
+
+<%end%>

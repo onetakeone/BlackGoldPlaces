@@ -1,0 +1,23 @@
+
+<table>
+	<tr>
+		<td>
+			<h2><%= @place.name %></h2>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<i><%= @place.city%>, <%= @place.street %>, <%= @place.bldg %></i>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p><%= @place.description %></p><h6><%= @place.tags %></h6>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= link_to 'edit', edit_place_path %>
+		</td>
+	</tr>
+</table>
