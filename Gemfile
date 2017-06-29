@@ -5,6 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem "capybara"
+end
+
+%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
+end 
+
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
